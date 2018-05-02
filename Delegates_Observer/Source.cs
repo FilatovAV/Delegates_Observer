@@ -8,5 +8,31 @@ namespace Delegates_Observer
 {
     class Source
     {
-    }
+        string str;
+        static int i;
+
+        MyDelegate functions;
+        public delegate void MyDelegate(object o);
+        public void Add(MyDelegate f)
+        {
+            functions += f;
+        }
+        public void Remove(MyDelegate f)
+        {
+            functions -= f;
+        }
+        public void Run()
+        {
+            //Console.WriteLine("RUNS!");
+            Program.frm.textBox1.Text += "RUNS!\r\n";
+
+            i += 1;
+
+            str = "11111" + i;
+
+            functions?.Invoke(this);
+        }
+
+
+        }
 }
