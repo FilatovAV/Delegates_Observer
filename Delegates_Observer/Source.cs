@@ -24,7 +24,7 @@ namespace Delegates_Observer
         public void Run()
         {
             //Console.WriteLine("RUNS!");
-            Program.frm.textBox1.Text += "RUNS!\r\n";
+            Program.frm.listBox1.Items.Add("RUNS!\r\n");
 
             i += 1;
 

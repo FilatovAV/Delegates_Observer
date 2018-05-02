@@ -11,7 +11,7 @@ namespace Delegates_Observer
         public void Do(object o)
         {
             //Console.WriteLine("Второй. Принял, что объект {0} побежал", o);
-            Program.frm.textBox1.Text += $"\r\nВторой. Принял, что объект {o} побежал\r\n";
+            Program.frm.listBox1.Items.Add(  $"\r\nВторой. Принял, что объект {o} побежал\r\n");
             
         }
     }
